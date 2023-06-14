@@ -1,0 +1,86 @@
+.all{
+  
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height:90vh;
+
+}
+.card{
+  margin: 20px;
+  height: 300px;
+  border: 2px solid #000;
+  box-shadow: 0px 0px 30px 0px #00000066;
+}
+.card-img-top{
+  height: 50%;
+}
+
+.left{
+  background-color: #ff0008;
+}
+label {
+  float: left;
+}
+
+.right{
+  background-color: #0011ff;
+}
+.App{
+  display: flex;
+}
+.rightside{
+  background-color: #161616;
+  background-image: url(../IMG/HomeBackground.jpg);
+  width: 100%;
+    height: 100vh;
+  padding: 20px;
+  display: block;
+}
+
+
+.tablesss1{
+  /* background-color: #0011ff; */
+  padding: 5%;
+}
+
+.toptable1{
+  /* background-color: #4dff00; */
+  margin-bottom: 50px;
+}
+
+
+.tit {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+}
+
+.successAndDanger {
+  /* background-color: #ff0008; */
+  
+}
+
+.pppsuccessAndDanger{
+  margin-top: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.success{
+  width: 100px;
+  height: 30px;
+text-align: center;
+
+}
+
+.inactive {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+}
+
+
+.buttable1{
+  background-color: #ffffff;
+  border-radius: 5px;
+}
