@@ -31,13 +31,13 @@ const Sidebar = () => {
             <NavLink exact to="/wallpapers/4" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="table">Category</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/wallpapers/1" activeClassName="activeClicked">
+            <NavLink exact to="/wallpapers/2" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="fa-solid fa-image">Wallpapers</CDBSidebarMenuItem>
               
             </NavLink>
 
           
-            <NavLink exact to="/wallpapers/5" activeClassName="activeClicked">
+            <NavLink exact to="/ads" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="chart-line">Manage Ads</CDBSidebarMenuItem>
             </NavLink>
 
@@ -45,8 +45,8 @@ const Sidebar = () => {
               <CDBSidebarMenuItem icon="credit-card">Subscription</CDBSidebarMenuItem>
             </NavLink>
 
-            <NavLink exact to="/insert_data" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="fa-solid fa-database">Insert Data</CDBSidebarMenuItem>
+            <NavLink exact to="/Setting" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="fas fa-cog">Setting</CDBSidebarMenuItem>
             </NavLink>
 
             

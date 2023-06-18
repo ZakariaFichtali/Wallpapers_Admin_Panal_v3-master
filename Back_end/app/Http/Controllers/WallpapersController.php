@@ -11,7 +11,7 @@ class WallpapersController extends Controller
     //
     public function index(){
         $wall = wallpapers::all();
-            return response()->json(["data"=>$wall]);
+            return $wall;
         // $wallObject = $wall->mapWithKeys(function($wall){
             // return [$wall->id=>$wall];
         // });

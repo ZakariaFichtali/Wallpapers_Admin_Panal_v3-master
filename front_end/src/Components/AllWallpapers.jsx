@@ -14,20 +14,20 @@ function AllWallpapers() {
   
   const deleteWallpaper = async (e, id) =>{
     console.log(id)
-    const res = await axios.delete(`http://127.0.0.1:8000/api/deleteWallpaper/${id}`);
+    const res = await axios.delete(`http://192.168.56.1:8000/api/deleteWallpaper/${id}`);
     await window.location.reload(true)
     
     }
 
   useEffect(()=>{
     const AllCards = async() =>{
-      const response = await axios.get('http://127.0.0.1:8000/api/Cards');
+      const response = await axios.get('http://192.168.56.1:8000/api/Cards');
       console.log(response.data)
       setCards(response.data)
     }
 
     const AllWallpapers = async()=>{
-      const response = await axios.get('http://127.0.0.1:8000/api/wallpapers');
+      const response = await axios.get('http://192.168.56.1:8000/api/wallpapers');
       console.log(response.data)
       setWallpapers(response.data)
     }
@@ -64,6 +64,7 @@ console.log(Wallpapers)
               <th scope='col'></th>
             </tr>
           </MDBTableHead>
+          
           <MDBTableBody>
             {filtred ? filtred.map((wallpapers) =>
 
@@ -71,7 +72,7 @@ console.log(Wallpapers)
 
               <tr className='tit'>
                 <td>
-                  <h3>{wallpapers.id}</h3>
+                  <h4>{wallpapers.id}</h4>
                 </td>
               <td>
                   <div className='ms-3'>
@@ -109,7 +110,7 @@ console.log(Wallpapers)
                 </td>
 
                 <td>
-                  <button color='link' rounded size='sm'>
+                  <button id='updatebtn02' color='link' rounded size='sm'>
                     <UpdateData data={wallpapers}/>
                   </button>
                   

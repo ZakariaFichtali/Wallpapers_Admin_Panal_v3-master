@@ -42,15 +42,18 @@ export default function App() {
     console.log("ez")
   e.preventDefault()
     console.log(formValue)
-    const res = await axios.post('http://127.0.0.1:8000/api/addWallpaper',formValue);
+    const res = await axios.post('http://192.168.56.1:8000/api/addWallpaper',formValue);
     console.log(res.data)
+    await window.location.reload(true)
+
+    
   }
 
   
 
   return (
     <>
-      <button className='btn btn-primary' onClick={toggleShow}>Add Wallpaper</button>
+      <button id='btn1' style={{fontSize:"14px"}} className='btn btn-primary' onClick={toggleShow}>Add Wallpaper</button>
 
       <MDBModal className='modal-lg' tabIndex='-1' show={centredModal} setShow={setCentredModal}>
         <MDBModalDialog >
@@ -127,7 +130,7 @@ export default function App() {
             </div>
             <button  type="submit"  className='btn btn-success'>Save changes</button>
 
-</form>
+      </form>
 
 
 
