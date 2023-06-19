@@ -20,11 +20,17 @@ class AdsController extends Controller
 
             // return response()->json(['Ads' => $ads->first()]);
 
-
-
 }
 
 
 
+    public function UpdateAds(Request  $request , $id){
+        $ads = Ads::find($id);
+        $ads->show_ads=$request->show_ads;
+        $ads->bannerAd=$request->bannerAd;
+        $ads->InterAd=$request->InterAd;
+        $ads->NativeAd=$request->NativeAd;
+        $ads->save();
+    }
 
 }

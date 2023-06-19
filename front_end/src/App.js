@@ -22,6 +22,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='/wallpapers/:id' element={<AllWallpapers />} />
           <Route path='/ads' element={<AllAds />} />
+          <Route path='/wallpapers/5' element={<AllAds />} />
 
      </Routes>
       </div>

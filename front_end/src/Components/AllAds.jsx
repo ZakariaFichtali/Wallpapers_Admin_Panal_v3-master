@@ -4,7 +4,7 @@ import { MDBBadge, MDBBtn, MDBTable, MDBTableHead, MDBTableBody } from 'mdb-reac
 import { CDBIcon } from 'cdbreact';
 
 import { useParams } from 'react-router-dom'
-import UpdateData from './Update_Data';
+import Update_Ads from './Update_Ads';
 
 function AllAds() {
     const { id } = useParams()
@@ -28,7 +28,7 @@ function AllAds() {
 
         const AllAds = async () => {
             const response = await axios.get('http://192.168.56.1:8000/api/ads');
-            console.log(response.data)
+            console.log(response.data) 
             setAds(response.data)
         }
 
@@ -47,9 +47,11 @@ function AllAds() {
     console.log(filtred)
     console.log(Ads)
 
+
     return (
 
         <div   className='tablesss1'>
+            <Update_Ads data={filtred}/>
 
             <div style={{ background: '#fff', overflow: "scroll", height: "600px" }} className='buttable1'>
             

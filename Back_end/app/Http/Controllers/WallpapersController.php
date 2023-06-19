@@ -38,11 +38,37 @@ class WallpapersController extends Controller
     }
 
     public function addWallpaper(Request  $request){
+
+
         $wall = new wallpapers();
+
+        
+
+
         $wall->name = $request->name;
         $wall->locked = $request->locked;
         $wall->card_id = $request->cards_id;
         $wall->image = $request->image;
+
+
+        // if($request->hasFile('image')) {
+        //         $image = $request->file('image');
+                
+        //             $filename = $image->getClientOriginalName();
+
+        //                  $finalName = date('His') . $filename;
+
+        //             $request->file('image')->storeAs('images/', $finalName, "public");
+
+        //         return response()->json(["message" => "Successfully upload an image"]);
+
+        //           } else {
+        //         return response()->json(["message" => "You must select the image first"]);
+        //     }
+
+
+
+
         $wall->save();
     }
 
