@@ -131,8 +131,8 @@ export default function Update_Ads(data) {
 
       <MDBModal className='modal-lg' tabIndex='-1' show={centredModal} setShow={setCentredModal}>
         <MDBModalDialog >
-          <MDBModalContent>
-            <MDBModalHeader>
+          <MDBModalContent  style={{  width: "1000px"}}>
+            <MDBModalHeader style={{  width: "1000px"}}>
               <MDBModalTitle>Add Ads</MDBModalTitle>
               <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
             </MDBModalHeader>
@@ -140,8 +140,8 @@ export default function Update_Ads(data) {
 
 
 
-              <form onSubmit={(e) => UpdateWallpaper(e, Info.data.map(a => a.id))}>
-                <div className='ggggg' style={{ display: 'flex', gap: '40px', paddingBottom: '20px' }}>
+              <form className='ff' onSubmit={(e) => UpdateWallpaper(e, Info.data.map(a => a.id))}>
+                <div className='ggggg' style={{ display: 'flex', flexWrap: 'wrap', gap: '5px', paddingBottom: '20px', }}>
 
                   {/* ------------------------------------------------------ */}
       
@@ -149,7 +149,7 @@ export default function Update_Ads(data) {
                     <label htmlFor="exampleInputEmail1">show_ads :</label>
                     <input
                       type="text"
-                      className="form-control"
+                      className="form-control-ads"
                       id="exampleInputEmail1"
                       name='show_ads'
                       onChange={handleChange}
@@ -163,7 +163,7 @@ export default function Update_Ads(data) {
                     <label htmlFor="exampleInputEmail1">bannerAd : </label>
                     <input
                       type="text"
-                      className="form-control"
+                      className="form-control-ads"
                       id="exampleInputEmail1"
                       onChange={handleChange}
                       name='bannerAd'
@@ -178,7 +178,7 @@ export default function Update_Ads(data) {
                     <input
                       list='cards_id'
                       autoComplete='off'
-                      className="form-control"
+                      className="form-control-ads"
                       onChange={handleChange}
                       name='InterAd'
                       value={formValue.InterAd}
@@ -199,7 +199,7 @@ export default function Update_Ads(data) {
                     <input
                       list='cards_id'
                       autoComplete='off'
-                      className="form-control"
+                      className="form-control-ads"
                       onChange={handleChange}
                       name='NativeAd'
                       value={formValue.NativeAd}
@@ -221,7 +221,7 @@ export default function Update_Ads(data) {
                     <input
                       list='cards_id'
                       autoComplete='off'
-                      className="form-control"
+                      className="form-control-ads"
                       onChange={handleChange}
                       name='card_id'
                       value={formValue.admob_banner}
@@ -246,7 +246,7 @@ export default function Update_Ads(data) {
                     <input
                       list='cards_id'
                       autoComplete='off'
-                      className="form-control"
+                      className="form-control-ads"
                       onChange={handleChange}
                       name='card_id'
                       value={formValue.admob_inter}
@@ -270,7 +270,7 @@ export default function Update_Ads(data) {
                     <input
                       list='cards_id'
                       autoComplete='off'
-                      className="form-control"
+                      className="form-control-ads"
                       onChange={handleChange}
                       name='card_id'
                       value={formValue.admob_native}
@@ -292,7 +292,7 @@ export default function Update_Ads(data) {
                     <input
                       list='cards_id'
                       autoComplete='off'
-                      className="form-control"
+                      className="form-control-ads"
                       onChange={handleChange}
                       name='card_id'
                       value={formValue.facebook_banner}
@@ -315,7 +315,7 @@ export default function Update_Ads(data) {
                     <input
                       list='cards_id'
                       autoComplete='off'
-                      className="form-control"
+                      className="form-control-ads"
                       onChange={handleChange}
                       name='card_id'
                       value={formValue.facebook_inter}
@@ -337,7 +337,7 @@ export default function Update_Ads(data) {
                     <input
                       list='cards_id'
                       autoComplete='off'
-                      className="form-control"
+                      className="form-control-ads"
                       onChange={handleChange}
                       name='card_id'
                       value={formValue.facebook_native}
@@ -359,7 +359,7 @@ export default function Update_Ads(data) {
                     <input
                       list='cards_id'
                       autoComplete='off'
-                      className="form-control"
+                      className="form-control-ads"
                       onChange={handleChange}
                       name='card_id'
                       value={formValue.max_banner}
@@ -382,7 +382,7 @@ export default function Update_Ads(data) {
                     <input
                       list='cards_id'
                       autoComplete='off'
-                      className="form-control"
+                      className="form-control-ads"
                       onChange={handleChange}
                       name='card_id'
                       value={formValue.max_inter}
@@ -405,7 +405,7 @@ export default function Update_Ads(data) {
                     <input
                       list='cards_id'
                       autoComplete='off'
-                      className="form-control"
+                      className="form-control-ads"
                       onChange={handleChange}
                       name='card_id'
                       value={formValue.max_native}
@@ -428,7 +428,7 @@ export default function Update_Ads(data) {
                     <input
                       list='cards_id'
                       autoComplete='off'
-                      className="form-control"
+                      className="form-control-ads"
                       onChange={handleChange}
                       name='card_id'
                       value={formValue.ironsource_api}
@@ -454,7 +454,7 @@ export default function Update_Ads(data) {
                     <input
                       list='cards_id'
                       autoComplete='off'
-                      className="form-control"
+                      className="form-control-ads"
                       onChange={handleChange}
                       name='card_id'
                       value={formValue.unityTest}
@@ -478,7 +478,7 @@ export default function Update_Ads(data) {
                     <input
                       list='cards_id'
                       autoComplete='off'
-                      className="form-control"
+                      className="form-control-ads"
                       onChange={handleChange}
                       name='card_id'
                       value={formValue.unityGameID	}
@@ -501,7 +501,7 @@ export default function Update_Ads(data) {
                     <input
                       list='cards_id'
                       autoComplete='off'
-                      className="form-control"
+                      className="form-control-ads"
                       onChange={handleChange}
                       name='card_id'
                       value={formValue.unityBanner  }
@@ -524,7 +524,7 @@ export default function Update_Ads(data) {
                     <input
                       list='cards_id'
                       autoComplete='off'
-                      className="form-control"
+                      className="form-control-ads"
                       onChange={handleChange}
                       name='card_id'
                       value={formValue.unityInter}
@@ -544,11 +544,11 @@ export default function Update_Ads(data) {
 
 
                       <div className="form-group">
-                    <label htmlFor="exampleInputEmail1">intersitial_click_activites : </label>
+                    <label htmlFor="exampleInputEmail1">click_activites : </label>
                     <input
                       list='cards_id'
                       autoComplete='off'
-                      className="form-control"
+                      className="form-control-ads"
                       onChange={handleChange}
                       name='card_id'
                       value={formValue.intersitial_click_activites}
@@ -568,11 +568,11 @@ export default function Update_Ads(data) {
 
 
                       <div className="form-group">
-                    <label htmlFor="exampleInputEmail1">intersitial_click_list : </label>
+                    <label htmlFor="exampleInputEmail1">click_list : </label>
                     <input
                       list='cards_id'
                       autoComplete='off'
-                      className="form-control"
+                      className="form-control-ads"
                       onChange={handleChange}
                       name='card_id'
                       value={formValue.intersitial_click_list}
@@ -598,7 +598,7 @@ export default function Update_Ads(data) {
                   <button className='btn btn-danger' color='secondary' onClick={toggleShow}>
                     Close
                   </button>
-                  <button className='btn btn-success'>Save changes</button>
+                  <button type='submit' className='btn btn-success'>Save changes</button>
                 </MDBModalFooter>
               </form>
 

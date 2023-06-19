@@ -52,6 +52,8 @@ function AllAds() {
 
         <div   className='tablesss1'>
             <Update_Ads data={filtred}/>
+            <br />
+            <br />
 
             <div style={{ background: '#fff', overflow: "scroll", height: "600px" }} className='buttable1'>
             
