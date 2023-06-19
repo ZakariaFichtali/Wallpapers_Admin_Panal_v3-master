@@ -42,7 +42,7 @@ export default function App() {
     console.log("ez")
   e.preventDefault()
     console.log(formValue)
-    const res = await axios.post('http://192.168.56.1:8000/api/addWallpaper',formValue);
+    const res = await axios.post('http://192.168.2.80:8000/api/addWallpaper',formValue);
     console.log(res.data)
     await window.location.reload(true)
 

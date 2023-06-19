@@ -28,7 +28,7 @@ function Home() {
 
     useEffect(()=>{
       const AllCards = async() =>{
-        const response = await axios.get('http://192.168.56.1:8000/api/Cards');
+        const response = await axios.get('http://192.168.2.80:8000/api/Cards');
         setCards(response.data)
       }
       AllCards();

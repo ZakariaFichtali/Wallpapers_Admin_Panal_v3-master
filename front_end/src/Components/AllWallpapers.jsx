@@ -14,20 +14,20 @@ function AllWallpapers() {
   
   const deleteWallpaper = async (e, id) =>{
     console.log(id)
-    const res = await axios.delete(`http://192.168.56.1:8000/api/deleteWallpaper/${id}`);
+    const res = await axios.delete(`http://192.168.2.80:8000/api/deleteWallpaper/${id}`);
     await window.location.reload(true)
     
     }
 
   useEffect(()=>{
     const AllCards = async() =>{
-      const response = await axios.get('http://192.168.56.1:8000/api/Cards');
+      const response = await axios.get('http://192.168.2.80:8000/api/Cards');
       console.log(response.data)
       setCards(response.data)
     }
 
     const AllWallpapers = async()=>{
-      const response = await axios.get('http://192.168.56.1:8000/api/wallpapers');
+      const response = await axios.get('http://192.168.2.80:8000/api/wallpapers');
       console.log(response.data)
       setWallpapers(response.data)
     }

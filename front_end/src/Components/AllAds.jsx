@@ -27,7 +27,7 @@ function AllAds() {
         // }
 
         const AllAds = async () => {
-            const response = await axios.get('http://192.168.56.1:8000/api/ads');
+            const response = await axios.get('http://192.168.2.80:8000/api/ads');
             console.log(response.data) 
             setAds(response.data)
         }

@@ -19,10 +19,39 @@ export default function Update_Ads(data) {
 
   const [Info, setInfo] = useState({})
   const [formValue, setFormValue] = useState({
+
+    // show_ads	
     show_ads: '',
-    bannerAd: '',
-    InterAd: '',
-    NativeAd: '',
+    // ads
+    bannerAd:  '',
+    InterAd:  '',
+    NativeAd:  '',
+    // Admob
+    admob_banner:  '',
+    admob_inter:  '',
+    admob_native: '',
+    // facebook
+    facebook_banner: '',
+    facebook_inter:  '',
+    facebook_native:  '',
+      // max
+    max_banner:  '',
+    max_inter:  '',
+    max_native:  '',
+    // ironsource_api	
+    ironsource_api: '',
+    // unity
+    unityTest:'',
+    unityGameID:  '',
+    unityBanner:  '',
+    unityInter:  '',
+    
+    // intersitial_click
+    intersitial_click_activites:  '',
+    intersitial_click_list:  '',
+
+
+
 
   });
   useEffect(() => {
@@ -31,10 +60,37 @@ export default function Update_Ads(data) {
   })
   useEffect(()=>{
     if(Info && Info.data){
-      setFormValue({ ...formValue, show_ads: Info.data.map(a => a.show_ads) })
-      setFormValue({ ...formValue, bannerAd: Info.data.map(a => a.bannerAd) })
-      setFormValue({ ...formValue, InterAd: Info.data.map(a => a.InterAd) })
-      setFormValue({ ...formValue, NativeAd: Info.data.map(a => a.NativeAd) })
+      setFormValue({ ...formValue,
+      // show_ads	
+      show_ads: Info.data.map(a => a.show_ads),
+      // ads
+      bannerAd: Info.data.map(a => a.bannerAd),
+      InterAd: Info.data.map(a => a.InterAd),
+      NativeAd: Info.data.map(a => a.NativeAd),
+      // Admob
+      admob_banner: Info.data.map(a => a.admob_banner),
+      admob_inter: Info.data.map(a => a.admob_inter),
+      admob_native: Info.data.map(a => a.admob_native),
+      // facebook
+      facebook_banner: Info.data.map(a => a.facebook_banner),
+      facebook_inter: Info.data.map(a => a.facebook_inter),
+      facebook_native: Info.data.map(a => a.facebook_native),
+        // max
+      max_banner: Info.data.map(a => a.max_banner),
+      max_inter: Info.data.map(a => a.max_inter),
+      max_native: Info.data.map(a => a.max_native	),
+      // ironsource_api	
+      ironsource_api: Info.data.map(a => a.max_banner),
+      // unity
+      unityTest: Info.data.map(a => a.unityTest),
+      unityGameID: Info.data.map(a => a.unityGameID),
+      unityBanner: Info.data.map(a => a.unityBanner	),
+      unityInter: Info.data.map(a => a.unityInter	),
+      
+      // intersitial_click
+      intersitial_click_activites: Info.data.map(a => a.intersitial_click_activites),
+      intersitial_click_list: Info.data.map(a => a.intersitial_click_list	)
+       })
 
     }
   },[Info])
@@ -60,7 +116,7 @@ export default function Update_Ads(data) {
   const UpdateWallpaper = async (e, id) => {
     e.preventDefault()
     console.log(formValue)
-    const res = await axios.put(`http://192.168.56.1:8000/api/UpdateAds/${id}`, formValue);
+    const res = await axios.put(`http://192.168.2.80:8000/api/UpdateAds/${id}`, formValue);
     // console.log(res.data)
   }
 
@@ -125,7 +181,7 @@ export default function Update_Ads(data) {
                       className="form-control"
                       onChange={handleChange}
                       name='InterAd'
-                      // value={formValue.InterAd}
+                      value={formValue.InterAd}
 
                     />
                     <datalist id='cards_id'>
@@ -146,7 +202,7 @@ export default function Update_Ads(data) {
                       className="form-control"
                       onChange={handleChange}
                       name='NativeAd'
-                      // value={formValue.NativeAd}
+                      value={formValue.NativeAd}
 
                     />
                     <datalist id='cards_id'>
@@ -168,7 +224,7 @@ export default function Update_Ads(data) {
                       className="form-control"
                       onChange={handleChange}
                       name='card_id'
-                      value={formValue.card_id}
+                      value={formValue.admob_banner}
 
                     />
                     <datalist id='cards_id'>
@@ -193,7 +249,7 @@ export default function Update_Ads(data) {
                       className="form-control"
                       onChange={handleChange}
                       name='card_id'
-                      value={formValue.card_id}
+                      value={formValue.admob_inter}
 
                     />
                     <datalist id='cards_id'>
@@ -205,7 +261,333 @@ export default function Update_Ads(data) {
 
                   {/* ------------------------------------------------------ */}
 
+                  
+                  {/* ------------------------------------------------------ */}
+
+
+                  <div className="form-group">
+                    <label htmlFor="exampleInputEmail1">admob_native : </label>
+                    <input
+                      list='cards_id'
+                      autoComplete='off'
+                      className="form-control"
+                      onChange={handleChange}
+                      name='card_id'
+                      value={formValue.admob_native}
+
+                    />
+                    <datalist id='cards_id'>
+                      <option value="hhh" />
+                      <option value="hhsdsdh" />
+                    </datalist>
+
+                  </div>
+
+                  {/* ------------------------------------------------------ */}
+ {/* ------------------------------------------------------ */}
+
+
+ <div className="form-group">
+                    <label htmlFor="exampleInputEmail1">facebook_banner : </label>
+                    <input
+                      list='cards_id'
+                      autoComplete='off'
+                      className="form-control"
+                      onChange={handleChange}
+                      name='card_id'
+                      value={formValue.facebook_banner}
+
+                    />
+                    <datalist id='cards_id'>
+                      <option value="hhh" />
+                      <option value="hhsdsdh" />
+                    </datalist>
+
+                  </div>
+
+                  {/* ------------------------------------------------------ */}
+
+                   {/* ------------------------------------------------------ */}
+
+
+                   <div className="form-group">
+                    <label htmlFor="exampleInputEmail1">facebook_inter : </label>
+                    <input
+                      list='cards_id'
+                      autoComplete='off'
+                      className="form-control"
+                      onChange={handleChange}
+                      name='card_id'
+                      value={formValue.facebook_inter}
+
+                    />
+                    <datalist id='cards_id'>
+                      <option value="hhh" />
+                      <option value="hhsdsdh" />
+                    </datalist>
+
+                  </div>
+
+                  {/* ------------------------------------------------------ */}
+                     {/* ------------------------------------------------------ */}
+
+
+                     <div className="form-group">
+                    <label htmlFor="exampleInputEmail1">facebook_native : </label>
+                    <input
+                      list='cards_id'
+                      autoComplete='off'
+                      className="form-control"
+                      onChange={handleChange}
+                      name='card_id'
+                      value={formValue.facebook_native}
+
+                    />
+                    <datalist id='cards_id'>
+                      <option value="hhh" />
+                      <option value="hhsdsdh" />
+                    </datalist>
+
+                  </div>
+
+                  {/* ------------------------------------------------------ */}
+                    {/* ------------------------------------------------------ */}
+
+
+                    <div className="form-group">
+                    <label htmlFor="exampleInputEmail1">max_banner : </label>
+                    <input
+                      list='cards_id'
+                      autoComplete='off'
+                      className="form-control"
+                      onChange={handleChange}
+                      name='card_id'
+                      value={formValue.max_banner}
+
+                    />
+                    <datalist id='cards_id'>
+                      <option value="hhh" />
+                      <option value="hhsdsdh" />
+                    </datalist>
+
+                  </div>
+
+                  {/* ------------------------------------------------------ */}
+
+                    {/* ------------------------------------------------------ */}
+
+
+                    <div className="form-group">
+                    <label htmlFor="exampleInputEmail1">max_inter : </label>
+                    <input
+                      list='cards_id'
+                      autoComplete='off'
+                      className="form-control"
+                      onChange={handleChange}
+                      name='card_id'
+                      value={formValue.max_inter}
+
+                    />
+                    <datalist id='cards_id'>
+                      <option value="hhh" />
+                      <option value="hhsdsdh" />
+                    </datalist>
+
+                  </div>
+
+                  {/* ------------------------------------------------------ */}
+
+                    {/* ------------------------------------------------------ */}
+
+
+                    <div className="form-group">
+                    <label htmlFor="exampleInputEmail1">max_native : </label>
+                    <input
+                      list='cards_id'
+                      autoComplete='off'
+                      className="form-control"
+                      onChange={handleChange}
+                      name='card_id'
+                      value={formValue.max_native}
+
+                    />
+                    <datalist id='cards_id'>
+                      <option value="hhh" />
+                      <option value="hhsdsdh" />
+                    </datalist>
+
+                  </div>
+
+                  {/* ------------------------------------------------------ */}
                
+                     {/* ------------------------------------------------------ */}
+
+
+                     <div className="form-group">
+                    <label htmlFor="exampleInputEmail1">ironsource_api : </label>
+                    <input
+                      list='cards_id'
+                      autoComplete='off'
+                      className="form-control"
+                      onChange={handleChange}
+                      name='card_id'
+                      value={formValue.ironsource_api}
+
+                    />
+                    <datalist id='cards_id'>
+                      <option value="hhh" />
+                      <option value="hhsdsdh" />
+                    </datalist>
+
+                  </div>
+
+                  {/* ------------------------------------------------------ */}
+               
+
+
+
+                     {/* ------------------------------------------------------ */}
+
+
+                     <div className="form-group">
+                    <label htmlFor="exampleInputEmail1">unityTest : </label>
+                    <input
+                      list='cards_id'
+                      autoComplete='off'
+                      className="form-control"
+                      onChange={handleChange}
+                      name='card_id'
+                      value={formValue.unityTest}
+
+                    />
+                    <datalist id='cards_id'>
+                      <option value="hhh" />
+                      <option value="hhsdsdh" />
+                    </datalist>
+
+                  </div>
+
+                  {/* ------------------------------------------------------ */}
+
+                    
+                     {/* ------------------------------------------------------ */}
+
+
+                     <div className="form-group">
+                    <label htmlFor="exampleInputEmail1">unityGameID	 : </label>
+                    <input
+                      list='cards_id'
+                      autoComplete='off'
+                      className="form-control"
+                      onChange={handleChange}
+                      name='card_id'
+                      value={formValue.unityGameID	}
+
+                    />
+                    <datalist id='cards_id'>
+                      <option value="hhh" />
+                      <option value="hhsdsdh" />
+                    </datalist>
+
+                  </div>
+
+                  {/* ------------------------------------------------------ */}
+                  
+                     {/* ------------------------------------------------------ */}
+
+
+                     <div className="form-group">
+                    <label htmlFor="exampleInputEmail1">unityBanner : </label>
+                    <input
+                      list='cards_id'
+                      autoComplete='off'
+                      className="form-control"
+                      onChange={handleChange}
+                      name='card_id'
+                      value={formValue.unityBanner  }
+
+                    />
+                    <datalist id='cards_id'>
+                      <option value="hhh" />
+                      <option value="hhsdsdh" />
+                    </datalist>
+
+                  </div>
+
+                  {/* ------------------------------------------------------ */}
+                  
+                     {/* ------------------------------------------------------ */}
+
+
+                     <div className="form-group">
+                    <label htmlFor="exampleInputEmail1">unityInter : </label>
+                    <input
+                      list='cards_id'
+                      autoComplete='off'
+                      className="form-control"
+                      onChange={handleChange}
+                      name='card_id'
+                      value={formValue.unityInter}
+
+                    />
+                    <datalist id='cards_id'>
+                      <option value="hhh" />
+                      <option value="hhsdsdh" />
+                    </datalist>
+
+                  </div>
+
+                  {/* ------------------------------------------------------ */}
+
+
+                      {/* ------------------------------------------------------ */}
+
+
+                      <div className="form-group">
+                    <label htmlFor="exampleInputEmail1">intersitial_click_activites : </label>
+                    <input
+                      list='cards_id'
+                      autoComplete='off'
+                      className="form-control"
+                      onChange={handleChange}
+                      name='card_id'
+                      value={formValue.intersitial_click_activites}
+
+                    />
+                    <datalist id='cards_id'>
+                      <option value="hhh" />
+                      <option value="hhsdsdh" />
+                    </datalist>
+
+                  </div>
+
+                  {/* ------------------------------------------------------ */}
+
+
+                      {/* ------------------------------------------------------ */}
+
+
+                      <div className="form-group">
+                    <label htmlFor="exampleInputEmail1">intersitial_click_list : </label>
+                    <input
+                      list='cards_id'
+                      autoComplete='off'
+                      className="form-control"
+                      onChange={handleChange}
+                      name='card_id'
+                      value={formValue.intersitial_click_list}
+
+                    />
+                    <datalist id='cards_id'>
+                      <option value="hhh" />
+                      <option value="hhsdsdh" />
+                    </datalist>
+
+                  </div>
+
+                  {/* ------------------------------------------------------ */}
+
+
 
 
                 </div>
