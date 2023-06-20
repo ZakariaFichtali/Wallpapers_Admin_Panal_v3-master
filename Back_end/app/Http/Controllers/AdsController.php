@@ -26,7 +26,6 @@ class AdsController extends Controller
 
     public function UpdateAds(Request  $request , $id){
         $ads = Ads::find($id);
-       
 // show_ads
         $ads->show_ads=$request->show_ads;
 // ads

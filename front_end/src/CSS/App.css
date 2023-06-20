@@ -123,5 +123,33 @@ text-align: center;
 .ggggg{
 display: flex;
   height: 600px;
+  width: 980px;
   flex-wrap: wrap;
+  background-color: #ffffff;
+}
+
+.ff{
+  background-color: #ffffff;
+  width: 980px;
+}
+
+.form-control-ads{
+  width: 230px;
+  height: 30px;
+  border: 2px #6A4892 solid;
+  border-radius: 5px;
+
+}
+
+label{
+display: block;
+background-color: #6A4892;
+color: #ffffff;
+border-radius: 5px;
+padding: 5px;
+
+
+}
+
+.exampleInputEmail1{
 }

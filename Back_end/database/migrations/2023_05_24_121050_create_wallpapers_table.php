@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string("image");
             $table->boolean("locked");
             $table->foreignId('card_id')->references('id')->on('cards');
-
             $table->timestamps();
         });
     }
