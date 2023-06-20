@@ -9,7 +9,7 @@ import {
   MDBModalBody,
   MDBModalFooter,
 } from 'mdb-react-ui-kit';
-import axios from 'axios';
+import axios from './AXOS'
 
 
 export default function UpdateData(data) {
@@ -41,7 +41,7 @@ export default function UpdateData(data) {
   const UpdateWallpaper =async (e,id) =>{
     e.preventDefault()
     console.log(formValue)
-    const res = await axios.put(`http://192.168.56.1:8000/api/UpdateWallpaper/${id}`,formValue);
+    const res = await axios.put(`/api/UpdateWallpaper/${id}`,formValue);
     // console.log(res.data)
     await window.location.reload(true)
 

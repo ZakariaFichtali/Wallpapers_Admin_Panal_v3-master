@@ -5,7 +5,7 @@ import AllWallpapers from "../IMG/AllWallpapers.jpg"
 import LiveWallpapers from "../IMG/LiveWallpapers.gif"
 import bk from "../IMG/bk.png"
 import ads from "../IMG/ads.jpg"; 
-import axios from 'axios';
+import axios from './AXOS'
 import Insert_Data from './Insert_Data';
 
 // -------------------------------------------------------------------
@@ -28,7 +28,7 @@ function Home() {
 
     useEffect(()=>{
       const AllCards = async() =>{
-        const response = await axios.get('http://192.168.56.1:8000/api/Cards');
+        const response = await axios.get('api/Cards');
         setCards(response.data)
       }
       AllCards();

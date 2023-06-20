@@ -10,7 +10,7 @@ import {
   MDBModalFooter,
 } from 'mdb-react-ui-kit';
 import { Form, InputGroup, Row, Button } from 'react-bootstrap';
-import axios from 'axios';
+import axios from './AXOS'
 
 
 export default function App() {
@@ -42,7 +42,7 @@ export default function App() {
     console.log("ez")
   e.preventDefault()
     console.log(formValue)
-    const res = await axios.post('http://192.168.56.1:8000/api/addWallpaper',formValue);
+    const res = await axios.post('/api/addWallpaper',formValue);
     console.log(res.data)
     await window.location.reload(true)
 

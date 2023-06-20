@@ -1,10 +1,10 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { MDBBadge, MDBBtn, MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 import { CDBIcon } from 'cdbreact';
 
 import { useParams } from 'react-router-dom'
 import Update_Ads from './Update_Ads';
+import AXOS from './AXOS';
 
 function AllAds() {
     const { id } = useParams()
@@ -27,7 +27,7 @@ function AllAds() {
         // }
 
         const AllAds = async () => {
-            const response = await axios.get('http://192.168.56.1:8000/api/ads');
+            const response = await AXOS.get('/api/ads');
             console.log(response.data) 
             setAds(response.data)
         }
