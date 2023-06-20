@@ -33,5 +33,6 @@ Route::delete('deleteWallpaper/{id}', [WallpapersController::class, 'destroy']);
 
 
 Route::put('UpdateWallpaper/{id}', [WallpapersController::class, 'UpdateWallpaper']);
+Route::put('UpdateAds/{id}', [AdsController::class, 'UpdateAds']);
 
 
